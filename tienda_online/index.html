@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VStore</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="./JS/data.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <div class="vstore">VStore</div>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Guitars</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="icon-menu">
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products-container">
+            <div class="product-card">
+                <figure class="product-img">
+                    <img src="./img/01.jpg" alt="roja" />
+                </figure>
+                <h3 class="product-title"></h3>
+                <p class="product-description"></p>
+                <p class="product-price"></p>
+                <button class="add-to-cart-button"></button>
+            </div>
+        </section>
+    </main>
+
+    <div class="cart-container hidden">
+        <h2 class="cart-title">Cart</h2>
+        <div class="cart-items">
+        </div>
+        <p class="cart-total">Total: €0</p>
+        <div class="btns-container">
+            <button class="empty-btn">Empty cart</button>
+            <button class="buy-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="./JS/functions.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,254 @@
+/* Resets */
+@import url(reset.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fonts and icons */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+/* Variables */
+:root {
+    --grey: grey;
+    --text-white: white;
+    --text-grey: grey;
+    --background-grey: #dbdbdb;
+    --primary-font: 'Montserrat', sans-serif;
+}
+
+/* Icon Menu */
+.icon-menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon-menu a {
+    margin-left: 20px;
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.icon-menu a:hover {
+    color: white;
+}
+
+/* End Icon Menu */
+
+
+/* Nav */
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: grey;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    color: black;
+}
+
+.menu .vstore {
+    display: flex;
+    justify-content: left;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu .vstore:hover {
+    color: white;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+/* End nav */
+
+
+/* Body */
+body,
+button {
+    font-family: var(--primary-font);
+    color: var(--text-grey);
+    background-color: var(--background-grey);
+}
+
+h2,
+h3 {
+    font-family: var(--secondary-font);
+}
+
+button {
+    border: none;
+}
+
+.hidden {
+    display: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+
+/* End general Layout */
+
+
+/* Products Section */
+.products-container {
+    background-color: var(--background-grey);
+    display: flex;
+    gap: 10px;
+    margin: 0 auto;
+    max-width: 900px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 10px;
+    background-color: var(--background-grey);
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    >* {
+        margin-top: 10px;
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-title {
+        font-weight: 600;
+        font-size: 16px;
+        color: black;
+    }
+
+    .product-description,
+    .product-price {
+        font-size: 14px;
+        color: var(--text-grey);
+    }
+
+    .product-img {
+        width: 230px;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        img {
+            border-radius: px;
+        }
+    }
+
+    .add-to-cart-button {
+        background-color: var(--grey);
+        color: var(--text-white);
+        width: 100%;
+        border-radius: 5px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: black;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+
+/* End products Section */
+
+
+/* Cart */
+.cart-container {
+    position: fixed;
+
+    width: 350px;
+    padding: 10px;
+    right: 1em;
+    top: 60px;
+
+    border: 1px solid black;
+    background-color: var(--background-grey);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    z-index: 99;
+    transition: 0.3s;
+}
+
+.cart-container>* {
+    margin: 0.2em;
+}
+
+.cart-title {
+    font-weight: 600;
+}
+
+.item-cart-container {
+    font-size: 0.9rem;
+    margin: 0.1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns-container>* {
+    margin-left: 0.1em;
+}
+
+.empty-btn,
+.buy-btn {
+    width: 100%;
+}
+
+.cart-container button {
+    background-color: var(--grey);
+    color: var(--text-white);
+    border-radius: 5px;
+}
+
+.cart-container button:hover {
+    cursor: pointer;
+    background-color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Cart buttons*/
+.eliminar-btn,
+.cantidad-btn {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.eliminar-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.cantidad-btn {
+    background-color: #3498db;
+    color: white;
+}
